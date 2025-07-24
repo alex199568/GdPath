@@ -4,38 +4,18 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
-
-    printf("Hello, World\n");
-
-    float fahr;
-    float celc;
-    int lower = 0;
-    int upper = 300;
-    int step = 20;
-
     printf("Fahrenheit to Celcius\n");
-    fahr = lower;
-    while (fahr <= upper)
+    for (float fahr = 0; fahr <= 300; fahr += 20)
     {
-        celc = 5 * (fahr - 32) / 9;
-        // celc / 5 = (fahr - 32) / 9
-        // celc / 5 * 9 = fahr - 32
-        // celc / 5 * 9 + 32 = fahr
+        float celc = 5 * (fahr - 32) / 9;
         printf("%3.0f %6.1f\n", fahr, celc);
-        fahr += step;
     }
 
     printf("Celcius to Fahrenheit\n");
-    lower = -40;
-    upper = 120;
-    step = 10;
-    celc = lower;
-    while (celc <= upper)
+    for (float celc = -40; celc <= 120; celc += 10)
     {
-        fahr = celc / 5 * 9 + 32;
+        float fahr = celc / 5 * 9 + 32;
         printf("%3.0f %6.1f\n", celc, fahr);
-        celc += step;
     }
 
     return 0;
